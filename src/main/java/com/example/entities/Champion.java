@@ -50,4 +50,8 @@ public class Champion {
     public void setId(String id) {
         this.id = id;
     }
+
+    public int getKey() {
+        return key;
+    }
 }

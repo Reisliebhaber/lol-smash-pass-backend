@@ -1,5 +1,5 @@
 CREATE DATABASE lol;
-CREATE TABLE IF NOT EXISTS champions (
+CREATE TABLE IF NOT EXISTS champion (
                                          `data_key` VARCHAR(12) CHARACTER SET utf8,
                                          `id` VARCHAR(12) CHARACTER SET utf8 NOT NULL,
                                          `key` INT,
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS champions (
                                          `blurb` VARCHAR(256) CHARACTER SET utf8,
                                          PRIMARY KEY (`id`)
 );
-INSERT INTO champions VALUES
+INSERT INTO champion VALUES
                           ('Aatrox','Aatrox',266,'Aatrox','Die Klinge der Düsteren','Einst waren Aatrox und seine Brüder ehrenhafte Verteidiger Shurimas gegen die Leere, die zu einer noch größeren Bedrohung für Runeterra wurden und schließlich nur durch hinterlistige, sterbliche Zauberei besiegt werden konnten. Aber nach Jahrhunderten...'),
                           ('Ahri','Ahri',103,'Ahri','die neunschwänzige Füchsin','Ahri wohnt die verborgene Kraft Runeterras inne. Sie ist eine Vastaya, die mittels Magie Kugeln reiner Energie formen kann. Sie liebt es, mit ihren Opfern zu spielen, indem sie deren Gefühle manipuliert und dann ihre Lebensessenz verschlingt. Trotz...'),
                           ('Akali','Akali',84,'Akali','die rebellische Assassine','Akali hat dem Kinkou-Orden und dem Titel der Faust der Schatten entsagt. Nun schlägt sie alleine zu und ist bereit, die tödliche Waffe zu sein, die ihr Volk braucht. Obwohl sie an allem festhält, was ihr Meister Shen ihr beigebracht hat, hat sie...'),
@@ -172,5 +172,5 @@ INSERT INTO champions VALUES
                           ('Zoe','Zoe',142,'Zoe','der Aspekt des Zwielichts','Zoe verkörpert den Übermut, die Fantasie und den Wandel. Als kosmische Botin des Targon verkündet sie bedeutende Ereignisse, die die Welten in ihren Grundfesten erschüttern. Ihre bloße Präsenz verzerrt die arkane Mathematik, die sämtliche Realitäten...'),
                           ('Zyra','Zyra',143,'Zyra','die Gebieterin der Dornen','Zyra wurde aus einer uralten, magischen Katastrophe heraus geboren und ist der gestaltgewordene Zorn der Natur – ein verführerisches Hybridwesen aus Mensch und Pflanze, das mit jedem Schritt neues Leben entfacht. In ihren Augen sind die Sterblichen von...');
 
-ALTER TABLE champions
+ALTER TABLE champion
     DROP COLUMN data_key;
