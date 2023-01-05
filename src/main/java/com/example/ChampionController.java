@@ -39,7 +39,7 @@ public class ChampionController {
     @Path("next")
     @Consumes(MediaType.APPLICATION_JSON)
     public ChampionDTO getNext(Champion champion) {//create new Champion class with champion img?
-        if (champion.getId() == null || champion.getId().equals("Zyra")) {
+        if (champion.getId().isBlank() || champion.getId().equals("Zyra")) {
             Champion aatrox = championRepo.find("id", "Aatrox").firstResult();
             return new ChampionDTO(aatrox, fetchChampionImage(aatrox));
         }
@@ -56,7 +56,7 @@ public class ChampionController {
                     allChampions.indexOf(searchedChamp) + 1
                 )
             )
-            .get();
+            .get();// error?
         ChampionDTO result = new ChampionDTO(nextChamp, fetchChampionImage(nextChamp));
         return result;
         //TODO tommy add img to champion + before that refactor logic of fetchChampionImgs to fetchChampionImg for only one Img
